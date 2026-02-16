@@ -1,0 +1,21 @@
+{
+    "group": "the drivers era",
+    "foundation_year": "03-16-2018",
+    "web": "https://www.thedriverera.com/",
+    "email": "n.arrabal@alumnos.upm.es",
+    "description": "El cantante principal es Ross Lynch, conocido como el actor de disney channel por interpretar a Austin Moon",
+    "members": "Roos Lynch, Rocky Lynch",
+    "albums":[
+        {
+            "name": "Girlfriend",
+            "year":"2021",
+            "songs":[
+                "A Kiss","Fade","Flashdrive"
+            ]
+        }
+    ],
+    "concerts":[
+        "Madrid","Londres","Berlín","París"
+    ]
+
+}
