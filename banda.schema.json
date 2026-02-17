@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json-schema.org/draft-04/schema#",
+    "$id":"https:// practica1.com/banda.schema.json",
+    "tittle":"Banda",
+    "description": "Una de mis bandas favoritas",
+    "type":"object",
+    "properties": {
+        "group":{
+            "description": "Nombre del grupo",
+            "type":"string",
+            "maxLength":50,
+            "minLength":2
+        },
+        "foundation_year":{
+            "description": "Fecha en la que se creó",
+            "type":"string",
+            "format":"date-time"
+        },
+        "web":{
+            "description": "Página web de la banda",
+            "type":"string",
+            "format":"uri"
+        },
+        "email":{
+            "description": "Página web de la banda",
+            "type":"string",
+            "format":"email"
+        },
+        "description":{
+            "description": "Descripcion del grupo",
+            "type":"string",
+            "maxLength":500,
+            "minLength":50
+        },
+        "members":{
+            "description": "Miembros del grupo",
+            "type":"array",
+            "maxLength":50,
+            "minLength":2
+        }
+        
+    }
+
+}
