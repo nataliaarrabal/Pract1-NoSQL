@@ -1,9 +1,10 @@
 {
-    "$schema": "https://json-schema.org/draft-04/schema#",
-    "$id":"https:// practica1.com/banda.schema.json",
-    "tittle":"Banda",
+    "$schema":"https://json-schema.org/draft-04/schema#",
+    "$id":"https://practica1.com/banda.schema.json",
+    "title":"Banda",
     "description": "Una de mis bandas favoritas",
     "type":"object",
+    "required":["group","foundation_year","web","email","description","members","albums","concerts"],
     "properties": {
         "group":{
             "description": "Nombre del grupo",
@@ -14,7 +15,7 @@
         "foundation_year":{
             "description": "Fecha en la que se creó",
             "type":"string",
-            "format":"date-time"
+            "format":"date"
         },
         "web":{
             "description": "Página web de la banda",
@@ -35,10 +36,81 @@
         "members":{
             "description": "Miembros del grupo",
             "type":"array",
-            "maxLength":50,
-            "minLength":2
-        }
-        
-    }
+            "maxItems":10,
+            "minItems":2,
+            "uniqueItems": true,
+            "items": {
+                "type":"object",
+                "required":["name","age"],
+                "properties": {
+                    "name":{
+                        "description": "Nombre integrante",
+                        "type":"string"
+                    },
+                    "age":{
+                        "description": "Edad del integrante",
+                        "type":"number",
+                        "exclusiveMaximum": 120,
+                        "exclusiveMinimum": 0
+                    }
+                }
+            }
+        },
+        "albums":{
+            "description": "Albums de la banda",
+            "type":"array",
+            "minItems":1,
+            "uniqueItems": true,
+            "items": {
+                "type":"object",
+                "required":["name","year","songs"],
+                "properties": {
+                    "name":{
+                        "description": "Nombre del album",
+                        "type":"string"
+                    },
+                    "year":{
+                        "description": "Año del album",
+                        "type":"string"
+                    },
+                    "songs":{
+                        "description":"Canciones del album",
+                        "type":"array",
+                            "items": {
+                                "type":"object",
+                                "required":["name","length"],
+                                "properties": {
+                                "name":{
+                                    "description": "Nombre de la canción",
+                                    "type":"string"
+                                },
+                                "length":{
+                                    "description": "Duración de la canción",
+                                    "type":"string",
+                                    "format":"time"
+                                },
+                                "hit":{
+                                    "description": "Hit del album",
+                                    "type":"boolean"
+                                    
+                                }
+                            }
 
+                            }
+                        }
+                    }
+                }
+        },
+        "concerts":{
+            "description": "Lugar de los conciertos",
+            "type":"array",
+            "minItems":1,
+            "uniqueItems": true,
+            "items": {
+                "type":"string",
+                "maxLength":20,
+                "minLength":0
+            }
+        }
+    }
 }

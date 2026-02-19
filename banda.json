@@ -1,7 +1,7 @@
 {
     "$schema": "./banda.schema.json",
     "group": "the driver era",
-    "foundation_year": "03-16-2018",
+    "foundation_year": "2018-03-16",
     "web": "https://www.thedriverera.com/",
     "email": "n.arrabal@alumnos.upm.es",
     "description": "El cantante principal es Ross Lynch, conocido como el actor de disney channel por interpretar a Austin Moon",
@@ -23,16 +23,16 @@
                 {
                     "name": "A Kiss",
                     "length": "00:04:31",
-                    "hit":"false"
+                    "hit":false
                 },
                 {
                     "name": "Fade",
                     "length": "00:04:00",
-                    "hit":"false"
+                    "hit":false
                 },{
                     "name": "Flashdrive",
                     "length": "00:03:33",
-                    "hit":"false"
+                    "hit":false
                 }
                 
             ]
